@@ -25,7 +25,7 @@ import static com.smartheima.takeoutnew.ui.Utils.TakeoutApp.sUser;
 public class LoginActivityPresenter extends BasePresenter {
     private static final String TAG = "LoginActivityPresenter";
     private LoginActivity mLoginActivity;
-    private boolean isLoginOk = false;
+    private boolean isLoginOk = false; 
 
     public LoginActivityPresenter(LoginActivity loginActivity) {
         this.mLoginActivity = loginActivity;

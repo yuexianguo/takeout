@@ -25,7 +25,8 @@ public class TakeoutOpenHelper extends OrmLiteSqliteOpenHelper {
     public void onCreate(SQLiteDatabase database, ConnectionSource connectionSource) {
         //创建数据库的时候需要创建表
         try {
-            TableUtils.clearTable(connectionSource, User.class);
+            TableUtils.createTable(connectionSource, User.class);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -33,6 +34,9 @@ public class TakeoutOpenHelper extends OrmLiteSqliteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase database, ConnectionSource connectionSource, int oldVersion, int newVersion) {
+        //更新旧表的字段，增加新的表
 
+        //创建收藏表
     }
+
 }

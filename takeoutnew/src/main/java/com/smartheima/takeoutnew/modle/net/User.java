@@ -1,7 +1,9 @@
 package com.smartheima.takeoutnew.modle.net;
 
 import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 
+@DatabaseTable(tableName = "t_user")
 public class User {
 	@DatabaseField(id=true)
 	private int id;//auto increment自动增长(generatedId = true)，第二种可以任意指定id = true
